@@ -1,0 +1,355 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9B0865F823FB88BC0040A6EC /* CandyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B0865F723FB88BC0040A6EC /* CandyView.xib */; };
+		9B89C8A223F6BA3A00DB443C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B89C8A123F6BA3A00DB443C /* AppDelegate.swift */; };
+		9B89C8AB23F6BA3C00DB443C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B89C8AA23F6BA3C00DB443C /* Assets.xcassets */; };
+		9B89C8AE23F6BA3C00DB443C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B89C8AC23F6BA3C00DB443C /* LaunchScreen.storyboard */; };
+		9B89C8B623F6BA6400DB443C /* CandyEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B89C8B523F6BA6400DB443C /* CandyEntity.swift */; };
+		9B89C8B823F6BA8E00DB443C /* CandyWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B89C8B723F6BA8E00DB443C /* CandyWorker.swift */; };
+		9B89C8BA23F6BB5000DB443C /* CandyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B89C8B923F6BB5000DB443C /* CandyInteractor.swift */; };
+		9B89C8BC23F6BD3800DB443C /* CandyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B89C8BB23F6BD3800DB443C /* CandyPresenter.swift */; };
+		9B89C8BE23F6BE0C00DB443C /* CandyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B89C8BD23F6BE0C00DB443C /* CandyRouter.swift */; };
+		9B89C8C023F6BE6700DB443C /* CandyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B89C8BF23F6BE6700DB443C /* CandyView.swift */; };
+		9B89C8C223F6C2F700DB443C /* CandyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B89C8C123F6C2F700DB443C /* CandyBuilder.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9B0865F723FB88BC0040A6EC /* CandyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CandyView.xib; sourceTree = "<group>"; };
+		9B89C89E23F6BA3A00DB443C /* ViperPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B89C8A123F6BA3A00DB443C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9B89C8AA23F6BA3C00DB443C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9B89C8AD23F6BA3C00DB443C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9B89C8AF23F6BA3C00DB443C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B89C8B523F6BA6400DB443C /* CandyEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandyEntity.swift; sourceTree = "<group>"; };
+		9B89C8B723F6BA8E00DB443C /* CandyWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandyWorker.swift; sourceTree = "<group>"; };
+		9B89C8B923F6BB5000DB443C /* CandyInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandyInteractor.swift; sourceTree = "<group>"; };
+		9B89C8BB23F6BD3800DB443C /* CandyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandyPresenter.swift; sourceTree = "<group>"; };
+		9B89C8BD23F6BE0C00DB443C /* CandyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandyRouter.swift; sourceTree = "<group>"; };
+		9B89C8BF23F6BE6700DB443C /* CandyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandyView.swift; sourceTree = "<group>"; };
+		9B89C8C123F6C2F700DB443C /* CandyBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandyBuilder.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9B89C89B23F6BA3A00DB443C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9B89C89523F6BA3A00DB443C = {
+			isa = PBXGroup;
+			children = (
+				9B89C8A023F6BA3A00DB443C /* ViperPractice */,
+				9B89C89F23F6BA3A00DB443C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9B89C89F23F6BA3A00DB443C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9B89C89E23F6BA3A00DB443C /* ViperPractice.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9B89C8A023F6BA3A00DB443C /* ViperPractice */ = {
+			isa = PBXGroup;
+			children = (
+				9B89C8A123F6BA3A00DB443C /* AppDelegate.swift */,
+				9B89C8AA23F6BA3C00DB443C /* Assets.xcassets */,
+				9B89C8AC23F6BA3C00DB443C /* LaunchScreen.storyboard */,
+				9B89C8AF23F6BA3C00DB443C /* Info.plist */,
+				9B89C8B523F6BA6400DB443C /* CandyEntity.swift */,
+				9B89C8B723F6BA8E00DB443C /* CandyWorker.swift */,
+				9B89C8B923F6BB5000DB443C /* CandyInteractor.swift */,
+				9B89C8BB23F6BD3800DB443C /* CandyPresenter.swift */,
+				9B89C8BD23F6BE0C00DB443C /* CandyRouter.swift */,
+				9B89C8BF23F6BE6700DB443C /* CandyView.swift */,
+				9B89C8C123F6C2F700DB443C /* CandyBuilder.swift */,
+				9B0865F723FB88BC0040A6EC /* CandyView.xib */,
+			);
+			path = ViperPractice;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9B89C89D23F6BA3A00DB443C /* ViperPractice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B89C8B223F6BA3C00DB443C /* Build configuration list for PBXNativeTarget "ViperPractice" */;
+			buildPhases = (
+				9B89C89A23F6BA3A00DB443C /* Sources */,
+				9B89C89B23F6BA3A00DB443C /* Frameworks */,
+				9B89C89C23F6BA3A00DB443C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ViperPractice;
+			productName = ViperPractice;
+			productReference = 9B89C89E23F6BA3A00DB443C /* ViperPractice.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9B89C89623F6BA3A00DB443C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "성다연";
+				TargetAttributes = {
+					9B89C89D23F6BA3A00DB443C = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 9B89C89923F6BA3A00DB443C /* Build configuration list for PBXProject "ViperPractice" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9B89C89523F6BA3A00DB443C;
+			productRefGroup = 9B89C89F23F6BA3A00DB443C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9B89C89D23F6BA3A00DB443C /* ViperPractice */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9B89C89C23F6BA3A00DB443C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B89C8AE23F6BA3C00DB443C /* LaunchScreen.storyboard in Resources */,
+				9B0865F823FB88BC0040A6EC /* CandyView.xib in Resources */,
+				9B89C8AB23F6BA3C00DB443C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9B89C89A23F6BA3A00DB443C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B89C8BA23F6BB5000DB443C /* CandyInteractor.swift in Sources */,
+				9B89C8B823F6BA8E00DB443C /* CandyWorker.swift in Sources */,
+				9B89C8B623F6BA6400DB443C /* CandyEntity.swift in Sources */,
+				9B89C8BE23F6BE0C00DB443C /* CandyRouter.swift in Sources */,
+				9B89C8BC23F6BD3800DB443C /* CandyPresenter.swift in Sources */,
+				9B89C8A223F6BA3A00DB443C /* AppDelegate.swift in Sources */,
+				9B89C8C223F6C2F700DB443C /* CandyBuilder.swift in Sources */,
+				9B89C8C023F6BE6700DB443C /* CandyView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9B89C8AC23F6BA3C00DB443C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B89C8AD23F6BA3C00DB443C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9B89C8B023F6BA3C00DB443C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9B89C8B123F6BA3C00DB443C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9B89C8B323F6BA3C00DB443C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ViperPractice/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = checkStudyList.ViperPractice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9B89C8B423F6BA3C00DB443C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ViperPractice/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = checkStudyList.ViperPractice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9B89C89923F6BA3A00DB443C /* Build configuration list for PBXProject "ViperPractice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B89C8B023F6BA3C00DB443C /* Debug */,
+				9B89C8B123F6BA3C00DB443C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B89C8B223F6BA3C00DB443C /* Build configuration list for PBXNativeTarget "ViperPractice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B89C8B323F6BA3C00DB443C /* Debug */,
+				9B89C8B423F6BA3C00DB443C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9B89C89623F6BA3A00DB443C /* Project object */;
+}
