@@ -19,12 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-        let candyView = CandyView(nibName: "CandyView", bundle: nil)
+        let candyView = View(nibName: "View", bundle: nil)
         let navController = UINavigationController(rootViewController: candyView)
         
         window?.rootViewController = navController
         
-        CandyBuilder.buildModule(arroundView: candyView)
+        Builder.buildModule(arroundView: candyView)
         
         return true
     }

@@ -8,7 +8,9 @@
 
 import Foundation
 
-struct CandyEntity {
+// Entitiy는 단순 데이터 모델
+
+struct Entity{
     let title : String
     let description : String
     let price : Float
