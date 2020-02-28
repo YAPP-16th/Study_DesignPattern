@@ -12,8 +12,8 @@ protocol PresenterProtocol : class {
     func fetch()
     func update(candyQuantity candyquantity : Int, chocoQuantity chocoquantity: Int)
     // 병합 성공
-    func interactorCandy(_ interactor : InteractorProtocol, didFetchCandy candyObject: Entity)
-    func interactorChoco(_ interactor : InteractorProtocol, didFetchChoco chocoObject: Entity)
+    func interactorCandy(_ interactor : InteractorProtocol, didFetchCandy candyObject: CandyEntity)
+    func interactorChoco(_ interactor : InteractorProtocol, didFetchChoco chocoObject: CandyEntity)
     // 병합 실패
     func interactor(_ interactor : InteractorProtocol, didFailWith error:Error)
     // total price 업데이트
@@ -22,7 +22,7 @@ protocol PresenterProtocol : class {
 
 // Presenter는 View에서 사용할 데이터 변환과 UI 작업 가로채기 작업을 수행한다.
 
-struct ViewModel{
+struct CandyViewModel{
     let title: String
     let description: String
     let price: String
@@ -37,13 +37,13 @@ struct TotalPriceViewModel {
     let chocoQuantity: String
 }
 
-class Presenter{
+class CandyPresenter {
     weak var view : ViewProtocol?
     var wireframe : RouterProtocol?
     var interactor : InteractorProtocol?
 }
 
-extension Presenter : PresenterProtocol {
+extension CandyPresenter : PresenterProtocol {
     func fetch() {
         interactor?.fetchItems()
     }
@@ -52,16 +52,16 @@ extension Presenter : PresenterProtocol {
         interactor?.update(candyQuantity: candyquantity, chocoQuantity: chocoquantity)
     }
     
-    func interactorCandy(_ interactor: InteractorProtocol, didFetchCandy candyObject: Entity) {
+    func interactorCandy(_ interactor: InteractorProtocol, didFetchCandy candyObject: CandyEntity) {
         let candyPriceText = "\(candyObject.price) 원"
-        let candyViewModel = ViewModel(title: candyObject.title, description: candyObject.description, price: candyPriceText, imageName: candyObject.imageName)
+        let candyViewModel = CandyViewModel(title: candyObject.title, description: candyObject.description, price: candyPriceText, imageName: candyObject.imageName)
         
         view?.setCandy(viewModel: candyViewModel)
     }
     
-    func interactorChoco(_ interactor: InteractorProtocol, didFetchChoco chocoObject: Entity) {
+    func interactorChoco(_ interactor: InteractorProtocol, didFetchChoco chocoObject: CandyEntity) {
          let chocoPriceText = "\(chocoObject.price) 원"
-         let chocoViewModel = ViewModel(title: chocoObject.title, description: chocoObject.description, price: chocoPriceText, imageName: chocoObject.imageName)
+         let chocoViewModel = CandyViewModel(title: chocoObject.title, description: chocoObject.description, price: chocoPriceText, imageName: chocoObject.imageName)
         
         view?.setChoco(viewModel: chocoViewModel)
     }

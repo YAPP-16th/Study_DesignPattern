@@ -10,13 +10,13 @@ import UIKit
 
 protocol ViewProtocol : class {
     var presenter : PresenterProtocol? { get set }
-    func setCandy(viewModel : ViewModel)
-    func setChoco(viewModel : ViewModel)
+    func setCandy(viewModel : CandyViewModel)
+    func setChoco(viewModel : CandyViewModel)
     func set(totalPriceViewModel viewModel : TotalPriceViewModel)
 }
 
 // View는 비즈니스 로직을 피한다. UI코드만 기억해야한다.
-class View : UIViewController {
+class CandyView : UIViewController {
     var presenter : PresenterProtocol?
     
     // CandyView
@@ -57,9 +57,9 @@ class View : UIViewController {
     }
 }
 
-extension View : ViewProtocol {
+extension CandyView : ViewProtocol {
     // candyview setting
-    func setCandy(viewModel : ViewModel){
+    func setCandy(viewModel : CandyViewModel){
         titleLabel.text = viewModel.title
         descriptionLabel.text = viewModel.description
         priceLabel.text = viewModel.price
@@ -67,7 +67,7 @@ extension View : ViewProtocol {
     }
     
     // chocoview setting
-    func setChoco(viewModel : ViewModel){
+    func setChoco(viewModel : CandyViewModel){
         chocoTitleLabel.text = viewModel.title
         chocoDescriptionLabel.text = viewModel.description
         chocoPriceLabel.text = viewModel.price

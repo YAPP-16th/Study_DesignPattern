@@ -8,7 +8,6 @@
 
 import Foundation
 
-// Candy 오브젝트로 데이터를 얻기 위해 웹 서비스 호출을 하는 api worker을 만든다.
 protocol InteractorProtocol {
     func fetchItems()
     func update(candyQuantity candyquantity:Int, chocoQuantity chocoquantity: Int)
@@ -17,11 +16,11 @@ protocol InteractorProtocol {
 // Interactor의 안에 비즈니스 로직이 있어야한다.
 // 네트워크 호출이나 데이터베이스 쿼리 등 데이터 수집 작업을 이곳에서 진행한다.
 
-class Interactor : InteractorProtocol {
+class CandyInteractor : InteractorProtocol {
     
     private static let vat : Float = 6.5
-    private var candyEntity : Entity?
-    private var chocoEntity : Entity?
+    private var candyEntity : CandyEntity?
+    private var chocoEntity : CandyEntity?
     private let apiWorker : APIWorkerProtocol
     
     var presenter : PresenterProtocol?
@@ -31,13 +30,14 @@ class Interactor : InteractorProtocol {
     }
     
     func fetchItems() {
+        // unowned는 값이 있음을 가정하고 사용하는 옵셔널. unowned 값이 nil이라 하면 크래쉬가 발생할 수 있음.
         apiWorker.fetchCandy{ [unowned self] (candyEntity) in
             self.candyEntity = candyEntity
             self.presenter?.interactorCandy(self, didFetchCandy : candyEntity)
         }
         apiWorker.fetchChoco{ [unowned self] (chocoEntity) in
-                   self.chocoEntity = chocoEntity
-                   self.presenter?.interactorChoco(self, didFetchChoco: chocoEntity)
+            self.chocoEntity = chocoEntity
+            self.presenter?.interactorChoco(self, didFetchChoco: chocoEntity)
         }
     }
     
@@ -47,14 +47,15 @@ class Interactor : InteractorProtocol {
            guard let chocoEntity = self.chocoEntity else { return }
            
            let totalPrice = candyEntity.price * Float(candyquantity) + chocoEntity.price * Float(chocoquantity)
-           let tax = (totalPrice/100) * Interactor.vat
+           let tax = (totalPrice/100) * CandyInteractor.vat
            let totalInclTax = totalPrice + tax
         
            presenter?.interactor(self,
                                  didUpdateTotalPrice: totalPrice,
                                  totalInclTax: totalInclTax,
-                                 vat: Interactor.vat,
-                                 candyQuantity: candyquantity, chocoQuantity: chocoquantity)
+                                 vat: CandyInteractor.vat,
+                                 candyQuantity: candyquantity,
+                                 chocoQuantity: chocoquantity)
     }
        
 }

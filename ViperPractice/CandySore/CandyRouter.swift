@@ -16,6 +16,6 @@ protocol RouterProtocol {
 // 이 구성요소는 원래의 Clean Code 원리에 존재하지 않는다.
 
 // Candy Module Router ( aka: wireframe)
-class Router: RouterProtocol {
-    
+class CandyRouter: RouterProtocol {
+   
 }

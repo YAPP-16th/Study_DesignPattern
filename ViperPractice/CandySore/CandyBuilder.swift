@@ -13,11 +13,11 @@ import UIKit
 // 일반적으로 View 주위에 VIPER 모듈을 구축하는 정적클래스만 포함한다.
 // 간단하게 말하면 Builder는 초기화용 코드
 
-class Builder {
+class CandyBuilder {
     class func buildModule(arroundView view: ViewProtocol){
-        let presenter = Presenter()
-        let interactor = Interactor(withApiWorker: APIWorker())
-        let router = Router()
+        let presenter = CandyPresenter()
+        let interactor = CandyInteractor(withApiWorker: CandyAPIWorker())
+        let router = CandyRouter()
         
         view.presenter = presenter
         presenter.view = view
