@@ -19,10 +19,11 @@ class MainView : UIViewController {
     @IBOutlet weak var candyName: UILabel!
     @IBOutlet weak var candyImage: UIImageView!
     
-    var presenter: MainPresenterProtocol?
+    var presenter: MainPresenterProtocol? // 프레센터 연결
     
     override func viewDidLoad() {
-        self.viewDidLoad()
+        super.viewDidLoad()
+        presenter?.fetch()
     }
 }
 
@@ -37,6 +38,7 @@ extension MainView : MainViewProtocol {
 
        
     @objc func touchCandyView(sender: UITapGestureRecognizer){
-           
+        print("touch CandyStore")
+        
        }
 }

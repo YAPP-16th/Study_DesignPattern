@@ -19,10 +19,11 @@ struct StoreViewModel {
 }
 
 class MainPresenter {
-    weak var view : MainViewProtocol?
-    var wireframe : MainRouterProtocol?
-    var interactor : MainInteractorProtocol?
+    weak var view : MainViewProtocol? // 뷰 연결 
+    var wireframe : RouterProtocol? // 라우터 연결
+    var interactor : MainInteractorProtocol? // 인터렉터 연결
 }
+
 extension MainPresenter : MainPresenterProtocol {
     func fetch() {
         interactor?.fetchStore()

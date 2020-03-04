@@ -10,15 +10,20 @@ import UIKit
 
 
 class MainBuilder {
-    class func MainModule(arroundView view: MainViewProtocol){
+    class func MainModule(arroundView view: MainViewProtocol) -> UIViewController {
+        let mainView = MainView(nibName: "MainView", bundle: nil)
         let presenter = MainPresenter()
         let interactor = MainInteractor(withAPIWorker: StoreAPIWorker())
         let router = MainRouter()
+        var navController : UINavigationController
         
-        view.presenter = presenter
-        presenter.view = view
+        mainView.presenter = presenter
+        presenter.view = mainView
         presenter.wireframe = router
         presenter.interactor = interactor
         interactor.presenter = presenter
+        navController = UINavigationController(rootViewController : mainView)
+        
+        return navController
     }
 }

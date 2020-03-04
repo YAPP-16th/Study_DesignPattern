@@ -16,18 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
     
+        let routing = MainRouter()
         window = UIWindow(frame: UIScreen.main.bounds)
         //window = UIWindow(frame: CGRect(x: 0, y: 0, width: 375, height: 1000))
         // Display Window
         window?.makeKeyAndVisible()
-        
-        let candyView = CandyView(nibName: "CandyView", bundle: nil)
-        let navController = UINavigationController(rootViewController: candyView)
-        
-        window?.rootViewController = navController
-        
-        CandyBuilder.buildModule(arroundView: candyView)
-        
+        window?.rootViewController = routing.navController
+       
         return true
     }
 

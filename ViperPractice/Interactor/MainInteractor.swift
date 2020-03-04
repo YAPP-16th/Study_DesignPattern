@@ -16,7 +16,7 @@ class MainInteractor : MainInteractorProtocol {
     private var candyStore : StoreEntity?
     private let storeAPIWorker : APIStoreWorkerProtocol
     
-    var presenter : MainPresenterProtocol?
+    var presenter : MainPresenterProtocol? // 프레센터 연결
     
     required init(withAPIWorker apiworker : APIStoreWorkerProtocol) {
         self.storeAPIWorker = apiworker
@@ -25,7 +25,7 @@ class MainInteractor : MainInteractorProtocol {
     func fetchStore() {
         storeAPIWorker.fetchCandyStore{ [unowned self] (candyStore) in
             self.candyStore = candyStore
-        
+            self.presenter?.mergeInteractionCandy(self, FetchCandy: candyStore)
         }
     }
     
