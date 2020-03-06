@@ -39,7 +39,7 @@ struct TotalPriceViewModel {
 
 class CandyPresenter {
     weak var view : ViewProtocol?
-    var wireframe : RouterProtocol?
+    var wireframe : CandyRouterProtocol?
     var interactor : InteractorProtocol?
 }
 

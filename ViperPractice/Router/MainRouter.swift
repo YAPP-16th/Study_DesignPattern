@@ -5,31 +5,19 @@
 //  Created by 성다연 on 21/02/2020.
 //  Copyright © 2020 성다연. All rights reserved.
 //
-
+import Foundation
 import UIKit
 
-protocol RouterProtocol {
-    
+protocol RouterProtocol : class {
+    func pushToCandyScreen(nav navigationController: UINavigationController)
 }
 
-
 class MainRouter : RouterProtocol {
-    let mainView = MainView(nibName: "MainView", bundle: nil)
-    let presenter = MainPresenter()
-    let interactor = MainInteractor(withAPIWorker: StoreAPIWorker())
-    var navController : UINavigationController?
-    
-    init(){
-        mainView.presenter = presenter
-        presenter.view = mainView
-        presenter.interactor = interactor
-        presenter.wireframe = self
-        interactor.presenter = presenter
-        navController = UINavigationController(rootViewController : mainView)
-    }
-    
-    func pushView(){
-        
+    func pushToCandyScreen(nav navigationController: UINavigationController){
+        let storeView = CandyView(nibName: "CandyView",bundle: nil)
+        CandyBuilder.buildModule(arroundView: storeView)
+        navigationController.pushViewController(storeView, animated: true)
+        print("push new screen complete")
     }
 }
 

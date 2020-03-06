@@ -12,16 +12,18 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window : UIWindow?
+    var navController : UINavigationController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
     
-        let routing = MainRouter()
+        // 스토리보드 없이 xib로만 프로젝트를 구성했을 시 이런 식으로 윈도우를 선언해야 함
         window = UIWindow(frame: UIScreen.main.bounds)
-        //window = UIWindow(frame: CGRect(x: 0, y: 0, width: 375, height: 1000))
-        // Display Window
+        let mainView = MainView(nibName: "MainView", bundle: nil)
+        MainBuilder.buildModule(arroundView: mainView)
+        navController = UINavigationController(rootViewController: mainView)
+        window?.rootViewController = navController
         window?.makeKeyAndVisible()
-        window?.rootViewController = routing.navController
        
         return true
     }

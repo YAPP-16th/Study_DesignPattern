@@ -21,7 +21,7 @@ class CandyBuilder {
         
         view.presenter = presenter
         presenter.view = view
-        presenter.wireframe = router as! RouterProtocol
+        presenter.wireframe = router as CandyRouterProtocol
         presenter.interactor = interactor
         interactor.presenter = presenter
     }

@@ -20,6 +20,8 @@ class MainView : UIViewController {
     @IBOutlet weak var candyImage: UIImageView!
     
     var presenter: MainPresenterProtocol? // 프레센터 연결
+    var mainRouter : RouterProtocol?
+    var candyRouter : CandyRouterProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +40,8 @@ extension MainView : MainViewProtocol {
 
        
     @objc func touchCandyView(sender: UITapGestureRecognizer){
-        print("touch CandyStore")
-        
-       }
+        presenter?.showNextController(navigationController: navigationController!)
+        //mainRouter?.pushToCandyScreen(nav: (navigationController!))
+        // view -> Presenter -> Router 로 네비게이션을 넘겨주어야 화면이 이동한다.
+    }
 }

@@ -7,9 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
 protocol MainPresenterProtocol : class {
     func fetch()
+    func showNextController(navigationController: UINavigationController)
     func mergeInteractionCandy(_ interactor : MainInteractorProtocol, FetchCandy storeObject: StoreEntity)
 }
 
@@ -20,13 +22,17 @@ struct StoreViewModel {
 
 class MainPresenter {
     weak var view : MainViewProtocol? // 뷰 연결 
-    var wireframe : RouterProtocol? // 라우터 연결
+    var router : RouterProtocol? // 라우터 연결
     var interactor : MainInteractorProtocol? // 인터렉터 연결
 }
 
 extension MainPresenter : MainPresenterProtocol {
     func fetch() {
         interactor?.fetchStore()
+    }
+    
+    func showNextController(navigationController: UINavigationController) {
+        router?.pushToCandyScreen(nav: navigationController)
     }
     
     func mergeInteractionCandy(_ interactor: MainInteractorProtocol, FetchCandy storeObject: StoreEntity) {
