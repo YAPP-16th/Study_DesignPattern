@@ -9,7 +9,7 @@
 import Foundation
 
 class TrafficLightService{
-    func getTrafficLight(colorName: (String), callBack: (TrafficLight?) -> Void){
+    func getTrafficLight(colorName: (String), callBack: (TrafficLight?) -> Void) {
        
         //신호등 배열
         let trafficLights = [TrafficLight(colorName : "Red", description: "Stop"),

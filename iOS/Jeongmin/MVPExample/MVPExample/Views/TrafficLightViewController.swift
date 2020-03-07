@@ -9,33 +9,33 @@
 import Foundation
 import UIKit
 
-class TrafficLightViewController : UIViewController, TrafficLightViewDelegate {
-   
+class TrafficLightViewController : UIViewController, TrafficLightViewProtocol {
+    
     //신호등에 따른 description을 보여줄 라벨
     @IBOutlet weak var descriptionLabel : UILabel!
     
     //presenter
-    private let trafficLightPresenter = TrafficLightPresenter(trafficLightService: TrafficLightService())
+    private weak var presenter: TrafficLightPresenterProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        trafficLightPresenter.setViewDelegate(trafficLightViewDelegate: self)
+        
+        presenter = TrafficLightPresenter(view: self)
     }
     
     @IBAction func redLightAction(_sender: Any) {
-      trafficLightPresenter.trafficLightColorSelected(colorName: "Red")
+        presenter.trafficLightColorSelected(colorName: "Red")
     }
-  
+    
     @IBAction func yelloLightAction(_sender: Any) {
-         trafficLightPresenter.trafficLightColorSelected(colorName: "Yellow")
+        presenter.trafficLightColorSelected(colorName: "Yellow")
     }
     
     @IBAction func greenLightAction(_sender: Any) {
-        trafficLightPresenter.trafficLightColorSelected(colorName: "Green")
+        presenter.trafficLightColorSelected(colorName: "Green")
     }
     
     func displayTrafficLight(description: String) {
         descriptionLabel.text = description
-        
     }
 }
