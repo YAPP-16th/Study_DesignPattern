@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol MainViewProtocol : class{
+protocol MainViewProtocol : class {
     var presenter: MainPresenterProtocol? {get set}
     func setCandyStore(viewmodel: StoreViewModel)
 }
@@ -19,10 +19,6 @@ class MainView : UIViewController {
     @IBOutlet weak var candyImage: UIImageView!
     
     var presenter: MainPresenterProtocol? // 프레센터 연결
-    var mainRouter : RouterProtocol?
-    var router: Routerable?
-    var candyRouter : CandyRouterProtocol?
-    var dependencies: MainPresenterDependecies?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +36,7 @@ extension MainView : MainViewProtocol {
     }
        
     @objc func touchCandyView(sender: UITapGestureRecognizer){
-        MainRouterInput().push(from: self)
+        MainRouter().push(from: self)
         
         //dependencies?.router.view.push(storeView, animated: true)
         //presenter?.showNextController(navigationController: navigationController!)

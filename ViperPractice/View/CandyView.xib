@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -211,6 +211,9 @@
                                     <state key="normal" title="선택 취소">
                                         <color key="titleColor" red="0.1450980392" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
+                                    <connections>
+                                        <action selector="cancleBtn:" destination="-1" eventType="touchUpInside" id="Msk-wJ-Ets"/>
+                                    </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(주) 다람쥐     000-0000-0000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAg-Qw-tcU">
                                     <rect key="frame" x="22" y="961" width="227" height="21"/>
@@ -218,18 +221,6 @@
                                     <color key="textColor" red="0.81929510829999996" green="0.77660709620000001" blue="0.7686266303" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3w8-po-ro1">
-                                    <rect key="frame" x="20" y="867" width="335" height="77"/>
-                                    <color key="backgroundColor" red="0.2156862745" green="0.20784313730000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="335" id="CwL-KW-tDI"/>
-                                        <constraint firstAttribute="height" constant="77" id="eOF-4A-ZQ1"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                    <state key="normal" title="기부하기">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -243,10 +234,8 @@
                                 <constraint firstItem="U5w-cr-5z8" firstAttribute="centerX" secondItem="tO2-qi-Hvh" secondAttribute="centerX" id="QYM-tN-aiv"/>
                                 <constraint firstAttribute="width" constant="375" id="bLJ-8P-zyI"/>
                                 <constraint firstItem="nFT-f2-uLW" firstAttribute="top" secondItem="tO2-qi-Hvh" secondAttribute="top" constant="24" id="cej-ua-ugU"/>
-                                <constraint firstItem="lAg-Qw-tcU" firstAttribute="top" secondItem="3w8-po-ro1" secondAttribute="bottom" constant="17" id="hLW-kG-9E4"/>
-                                <constraint firstItem="3w8-po-ro1" firstAttribute="centerX" secondItem="tO2-qi-Hvh" secondAttribute="centerX" id="hfa-Ar-wgk"/>
+                                <constraint firstAttribute="bottom" secondItem="lAg-Qw-tcU" secondAttribute="bottom" constant="18" id="dkd-xK-DOR"/>
                                 <constraint firstItem="46d-qz-HzN" firstAttribute="centerX" secondItem="tO2-qi-Hvh" secondAttribute="centerX" id="ir4-Qo-May"/>
-                                <constraint firstItem="3w8-po-ro1" firstAttribute="top" secondItem="46d-qz-HzN" secondAttribute="bottom" constant="22" id="zch-BA-6d4"/>
                             </constraints>
                         </view>
                     </subviews>

@@ -8,14 +8,8 @@
 
 import Foundation
 
-typealias MainPresenterDependecies = (
-    interactor : MainInteractor,
-    router: RouterOutput
-)
-
 protocol MainPresenterProtocol : class {
     func fetch()
-    func sendToRouter()
     func mergeInteractionCandy(_ interactor : MainInteractorProtocol, FetchCandy storeObject: StoreEntity)
 }
 
@@ -28,22 +22,15 @@ class MainPresenter {
     weak var view : MainViewProtocol? // 뷰 연결 
     var router : RouterProtocol? // 라우터 연결
     var interactor : MainInteractorProtocol? // 인터렉터 연결
-    var dependencies: MainPresenterDependecies?
 }
 
 extension MainPresenter : MainPresenterProtocol {
     func fetch() {
         interactor?.fetchStore()
     }
-    
-    func sendToRouter() {
-        //
-    }
    
     func mergeInteractionCandy(_ interactor: MainInteractorProtocol, FetchCandy storeObject: StoreEntity) {
         let viewModel = StoreViewModel(name: storeObject.StoreName, imageName: storeObject.StoreImage)
         view?.setCandyStore(viewmodel: viewModel)
     }
-    
-    
 }

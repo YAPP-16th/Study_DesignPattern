@@ -9,8 +9,7 @@
 import UIKit
 
 class MainBuilder {
-    class func buildModule(arroundView view: MainViewProtocol) {
-        //let mainView = MainView(nibName: "MainView", bundle: nil)
+    func buildModule(arroundView view: MainViewProtocol) {
         let presenter = MainPresenter()
         let interactor = MainInteractor(withAPIWorker: StoreAPIWorker())
         let router = MainRouter()
@@ -20,6 +19,5 @@ class MainBuilder {
         presenter.router = router as RouterProtocol
         presenter.interactor = interactor
         interactor.presenter = presenter
-        
     }
 }

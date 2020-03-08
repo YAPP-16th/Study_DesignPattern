@@ -9,11 +9,13 @@ import Foundation
 import UIKit
 
 protocol RouterProtocol {
-    func pushToCandyScreen()
+    func setCandyview() -> CandyView
+    func push(from:Viewable)
+    func present(from:Viewable)
 }
 
-struct MainRouterInput{
-    private func setCandyview()-> CandyView {
+class MainRouter : RouterProtocol {
+    func setCandyview()-> CandyView {
         let storeView = CandyView(nibName: "CandyView",bundle: nil)
         CandyBuilder.buildModule(arroundView: storeView)
         return storeView
@@ -27,15 +29,6 @@ struct MainRouterInput{
     func present(from:Viewable) {
         let nav = UINavigationController(rootViewController: setCandyview())
         from.present(nav, animated: true)
-    }
-}
-
-class MainRouter : RouterProtocol {
-    func pushToCandyScreen(){
-        let storeView = CandyView(nibName: "CandyView",bundle: nil)
-        CandyBuilder.buildModule(arroundView: storeView)
-        //UINavigationController.pushViewController(storeView, animated: true)
-        print("push new screen complete")
     }
 }
 

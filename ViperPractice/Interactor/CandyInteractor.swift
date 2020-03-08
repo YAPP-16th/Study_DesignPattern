@@ -40,17 +40,16 @@ class CandyInteractor : InteractorProtocol {
             self.presenter?.interactorChoco(self, didFetchChoco: chocoEntity)
         }
     }
-    
 
     func update(candyQuantity candyquantity: Int, chocoQuantity chocoquantity: Int) {
-           guard let candyEntity = self.candyEntity else { return }
-           guard let chocoEntity = self.chocoEntity else { return }
+        guard let candyEntity = self.candyEntity else { return }
+        guard let chocoEntity = self.chocoEntity else { return }
            
-           let totalPrice = candyEntity.price * Float(candyquantity) + chocoEntity.price * Float(chocoquantity)
-           let tax = (totalPrice/100) * CandyInteractor.vat
-           let totalInclTax = totalPrice + tax
+        let totalPrice = candyEntity.price * Float(candyquantity) + chocoEntity.price * Float(chocoquantity)
+        let tax = (totalPrice/100) * CandyInteractor.vat
+        let totalInclTax = totalPrice + tax
         
-           presenter?.interactor(self,
+        presenter?.interactor(self,
                                  didUpdateTotalPrice: totalPrice,
                                  totalInclTax: totalInclTax,
                                  vat: CandyInteractor.vat,

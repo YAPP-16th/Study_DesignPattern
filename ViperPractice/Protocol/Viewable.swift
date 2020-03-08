@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+// 화면 전환을 위해 필요한 코드. 출처는 https://github.com/yokurin/Swift-VIPER-iOS
 protocol Viewable: AnyObject {
     func push(_ vc: UIViewController, animated: Bool)
     func present(_ vc: UIViewController, animated: Bool)
@@ -18,7 +19,6 @@ protocol Viewable: AnyObject {
 }
 
 extension Viewable where Self: UIViewController {
-
     func push(_ vc: UIViewController, animated: Bool) {
         self.navigationController?.pushViewController(vc, animated: animated)
     }

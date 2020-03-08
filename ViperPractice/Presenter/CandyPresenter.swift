@@ -47,7 +47,7 @@ extension CandyPresenter : PresenterProtocol {
     func fetch() {
         interactor?.fetchItems()
     }
-    
+
     func update(candyQuantity candyquantity: Int, chocoQuantity chocoquantity: Int) {
         interactor?.update(candyQuantity: candyquantity, chocoQuantity: chocoquantity)
     }

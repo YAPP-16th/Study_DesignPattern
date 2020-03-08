@@ -28,5 +28,4 @@ class MainInteractor : MainInteractorProtocol {
             self.presenter?.mergeInteractionCandy(self, FetchCandy: candyStore)
         }
     }
-    
 }

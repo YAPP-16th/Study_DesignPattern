@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 스토리보드 없이 xib로만 프로젝트를 구성했을 시 이런 식으로 윈도우를 선언해야 함
         window = UIWindow(frame: UIScreen.main.bounds)
         let mainView = MainView(nibName: "MainView", bundle: nil)
-        MainBuilder.buildModule(arroundView: mainView)
+        MainBuilder().buildModule(arroundView: mainView)
         navController = UINavigationController(rootViewController: mainView)
         window?.rootViewController = navController
         window?.makeKeyAndVisible()
