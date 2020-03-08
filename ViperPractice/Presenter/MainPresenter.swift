@@ -7,11 +7,15 @@
 //
 
 import Foundation
-import UIKit
+
+typealias MainPresenterDependecies = (
+    interactor : MainInteractor,
+    router: RouterOutput
+)
 
 protocol MainPresenterProtocol : class {
     func fetch()
-    func showNextController(navigationController: UINavigationController)
+    func sendToRouter()
     func mergeInteractionCandy(_ interactor : MainInteractorProtocol, FetchCandy storeObject: StoreEntity)
 }
 
@@ -24,6 +28,7 @@ class MainPresenter {
     weak var view : MainViewProtocol? // 뷰 연결 
     var router : RouterProtocol? // 라우터 연결
     var interactor : MainInteractorProtocol? // 인터렉터 연결
+    var dependencies: MainPresenterDependecies?
 }
 
 extension MainPresenter : MainPresenterProtocol {
@@ -31,10 +36,10 @@ extension MainPresenter : MainPresenterProtocol {
         interactor?.fetchStore()
     }
     
-    func showNextController(navigationController: UINavigationController) {
-        router?.pushToCandyScreen(nav: navigationController)
+    func sendToRouter() {
+        //
     }
-    
+   
     func mergeInteractionCandy(_ interactor: MainInteractorProtocol, FetchCandy storeObject: StoreEntity) {
         let viewModel = StoreViewModel(name: storeObject.StoreName, imageName: storeObject.StoreImage)
         view?.setCandyStore(viewmodel: viewModel)

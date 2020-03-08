@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9B0865F823FB88BC0040A6EC /* CandyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B0865F723FB88BC0040A6EC /* CandyView.xib */; };
 		9B13C68D24124E9700D7221E /* Viewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B13C68C24124E9700D7221E /* Viewable.swift */; };
+		9B24824B24127520005BC5E2 /* RouterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B24824A24127520005BC5E2 /* RouterOutput.swift */; };
+		9B24824D24127733005BC5E2 /* RouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B24824C24127733005BC5E2 /* RouterInput.swift */; };
 		9B3735C5240F882900D0B09B /* CandyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3735C4240F882900D0B09B /* CandyRouter.swift */; };
 		9B89C8A223F6BA3A00DB443C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B89C8A123F6BA3A00DB443C /* AppDelegate.swift */; };
 		9B89C8AB23F6BA3C00DB443C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B89C8AA23F6BA3C00DB443C /* Assets.xcassets */; };
@@ -32,6 +34,8 @@
 /* Begin PBXFileReference section */
 		9B0865F723FB88BC0040A6EC /* CandyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CandyView.xib; sourceTree = "<group>"; };
 		9B13C68C24124E9700D7221E /* Viewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viewable.swift; sourceTree = "<group>"; };
+		9B24824A24127520005BC5E2 /* RouterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterOutput.swift; sourceTree = "<group>"; };
+		9B24824C24127733005BC5E2 /* RouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterInput.swift; sourceTree = "<group>"; };
 		9B3735C4240F882900D0B09B /* CandyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandyRouter.swift; sourceTree = "<group>"; };
 		9B89C89E23F6BA3A00DB443C /* ViperPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B89C8A123F6BA3A00DB443C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +69,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B24824E24127BE8005BC5E2 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				9B13C68C24124E9700D7221E /* Viewable.swift */,
+				9B24824A24127520005BC5E2 /* RouterOutput.swift */,
+				9B24824C24127733005BC5E2 /* RouterInput.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		9B3735BD240F7E8700D0B09B /* Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +163,7 @@
 		9B89C8A023F6BA3A00DB443C /* ViperPractice */ = {
 			isa = PBXGroup;
 			children = (
+				9B24824E24127BE8005BC5E2 /* Protocol */,
 				9B3735C2240F7ED500D0B09B /* View */,
 				9B3735C3240F7F0300D0B09B /* Builder */,
 				9B3735C0240F7EA000D0B09B /* Router */,
@@ -160,7 +175,6 @@
 				9B89C8AA23F6BA3C00DB443C /* Assets.xcassets */,
 				9B89C8AC23F6BA3C00DB443C /* LaunchScreen.storyboard */,
 				9B89C8AF23F6BA3C00DB443C /* Info.plist */,
-				9B13C68C24124E9700D7221E /* Viewable.swift */,
 			);
 			path = ViperPractice;
 			sourceTree = "<group>";
@@ -240,6 +254,7 @@
 				9B89C8BA23F6BB5000DB443C /* CandyInteractor.swift in Sources */,
 				9B89C8B823F6BA8E00DB443C /* CandyWorker.swift in Sources */,
 				9B89C8B623F6BA6400DB443C /* CandyEntity.swift in Sources */,
+				9B24824B24127520005BC5E2 /* RouterOutput.swift in Sources */,
 				9BFBE81A23FFC9AE006E4920 /* MainInteractor.swift in Sources */,
 				9BFBE82023FFC9CE006E4920 /* MainBuilder.swift in Sources */,
 				9BFBE81E23FFC9C4006E4920 /* MainRouter.swift in Sources */,
@@ -247,6 +262,7 @@
 				9BFBE81823FFC992006E4920 /* MainEntity.swift in Sources */,
 				9B13C68D24124E9700D7221E /* Viewable.swift in Sources */,
 				9BFBE82623FFCC35006E4920 /* MainView.swift in Sources */,
+				9B24824D24127733005BC5E2 /* RouterInput.swift in Sources */,
 				9B89C8A223F6BA3A00DB443C /* AppDelegate.swift in Sources */,
 				9BFBE81C23FFC9BD006E4920 /* MainPresenter.swift in Sources */,
 				9B89C8C223F6C2F700DB443C /* CandyBuilder.swift in Sources */,

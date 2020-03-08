@@ -13,7 +13,6 @@ protocol MainViewProtocol : class{
     func setCandyStore(viewmodel: StoreViewModel)
 }
 
-
 class MainView : UIViewController {
     @IBOutlet weak var candyView: UIView!
     @IBOutlet weak var candyName: UILabel!
@@ -21,7 +20,9 @@ class MainView : UIViewController {
     
     var presenter: MainPresenterProtocol? // 프레센터 연결
     var mainRouter : RouterProtocol?
+    var router: Routerable?
     var candyRouter : CandyRouterProtocol?
+    var dependencies: MainPresenterDependecies?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,11 +38,15 @@ extension MainView : MainViewProtocol {
         
         self.candyView.addGestureRecognizer(candyGesture)
     }
-
        
     @objc func touchCandyView(sender: UITapGestureRecognizer){
-        presenter?.showNextController(navigationController: navigationController!)
+        MainRouterInput().push(from: self)
+        
+        //dependencies?.router.view.push(storeView, animated: true)
+        //presenter?.showNextController(navigationController: navigationController!)
         //mainRouter?.pushToCandyScreen(nav: (navigationController!))
-        // view -> Presenter -> Router 로 네비게이션을 넘겨주어야 화면이 이동한다.
+        // view -> Presenter -> Router 로 네비게이션을 넘겨주어야 화면이 이동한다. <- viper에 부합하지 않음
     }
 }
+
+extension MainView : Viewable {}

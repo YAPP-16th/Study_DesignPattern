@@ -27,7 +27,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ncI-af-RJ5" userLabel="CandyView">
-                    <rect key="frame" x="15.5" y="290" width="383" height="251"/>
+                    <rect key="frame" x="15.5" y="327.5" width="383" height="251"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Candy Store" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZQ-Ep-Re2">
                             <rect key="frame" x="117" y="10" width="149" height="34"/>
@@ -57,9 +57,9 @@
             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
                 <constraint firstItem="P02-sE-Lsr" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Mqk-aQ-RNK"/>
-                <constraint firstItem="ncI-af-RJ5" firstAttribute="top" secondItem="P02-sE-Lsr" secondAttribute="bottom" constant="164" id="QtS-CD-Zkd"/>
                 <constraint firstItem="P02-sE-Lsr" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="46" id="XRz-A8-F7B"/>
                 <constraint firstItem="ncI-af-RJ5" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="xzq-Jc-rsO"/>
+                <constraint firstItem="ncI-af-RJ5" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="yMr-6c-UnN"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="137.68115942028987" y="102.45535714285714"/>
