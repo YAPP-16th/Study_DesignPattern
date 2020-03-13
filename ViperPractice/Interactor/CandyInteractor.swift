@@ -17,7 +17,6 @@ protocol InteractorProtocol {
 // 네트워크 호출이나 데이터베이스 쿼리 등 데이터 수집 작업을 이곳에서 진행한다.
 
 class CandyInteractor : InteractorProtocol {
-    
     private static let vat : Float = 6.5
     private var candyEntity : CandyEntity?
     private var chocoEntity : CandyEntity?

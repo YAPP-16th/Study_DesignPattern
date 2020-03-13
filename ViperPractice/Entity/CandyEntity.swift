@@ -9,9 +9,27 @@
 import Foundation
 
 // Entitiy는 단순 데이터 모델
+
+// 가공 전 모델
 struct CandyEntity{
     let title : String
     let description : String
     let price : Float
     let imageName : String
+}
+
+// 가공 후 모델
+struct CandyViewModel{
+    let title: String
+    let description: String
+    let price: String
+    let imageName: String
+}
+
+struct TotalPriceViewModel {
+    let totalPrice: String
+    let totalInclTax: String
+    let vat: String
+    let candyQuantity: String
+    let chocoQuantity: String
 }

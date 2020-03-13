@@ -22,21 +22,6 @@ protocol PresenterProtocol : class {
 
 // Presenter는 View에서 사용할 데이터 변환과 UI 작업 가로채기 작업을 수행한다.
 
-struct CandyViewModel{
-    let title: String
-    let description: String
-    let price: String
-    let imageName: String
-}
-
-struct TotalPriceViewModel {
-    let totalPrice: String
-    let totalInclTax: String
-    let vat: String
-    let candyQuantity: String
-    let chocoQuantity: String
-}
-
 class CandyPresenter {
     weak var view : ViewProtocol?
     var wireframe : CandyRouterProtocol?

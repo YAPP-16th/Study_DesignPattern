@@ -13,11 +13,6 @@ protocol MainPresenterProtocol : class {
     func mergeInteractionCandy(_ interactor : MainInteractorProtocol, FetchCandy storeObject: StoreEntity)
 }
 
-struct StoreViewModel {
-    let name: String
-    let imageName: String
-}
-
 class MainPresenter {
     weak var view : MainViewProtocol? // 뷰 연결 
     var router : RouterProtocol? // 라우터 연결

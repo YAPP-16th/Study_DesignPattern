@@ -10,7 +10,7 @@ import UIKit
 
 class MainBuilder {
     func buildModule(arroundView view: MainViewProtocol) {
-        let presenter = MainPresenter()
+        let presenter = MainPresenter() //초기화 시킬 때 메모리에 올라가며 RC가 들어감
         let interactor = MainInteractor(withAPIWorker: StoreAPIWorker())
         let router = MainRouter()
         

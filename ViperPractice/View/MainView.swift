@@ -15,6 +15,9 @@ import UIKit
  메모리 릭이란?
  - 메모리 누수 현상, 필요하지 않은 메모리를 계속 점유하고 있는 현상으로 할당된 메모리를 사용한 다음 반환하지 않는 것이 누적되면 메모리가 낭비된다.
  **/
+
+// VIPER 의 View는 다음(넘어가는) 뷰를 모르는 상태, 뷰는 보여주는 목적으로 쓰여야한다
+
 protocol MainViewProtocol : class {
     var presenter: MainPresenterProtocol? {get set}
     func setCandyStore(viewmodel: StoreViewModel)
@@ -26,7 +29,8 @@ class MainView : UIViewController {
     @IBOutlet weak var candyImage: UIImageView!
     
     var presenter: MainPresenterProtocol? // 프레센터 연결
-    
+    // 프로토콜을 사용할 때 !로 선언하기 - 메모리 문제 발생할 수 있음
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.fetch()
@@ -44,12 +48,10 @@ extension MainView : MainViewProtocol {
        
     @objc func touchCandyView(sender: UITapGestureRecognizer){
         MainRouter().push(from: self)
-        
-        
         //dependencies?.router.view.push(storeView, animated: true)
         //presenter?.showNextController(navigationController: navigationController!)
         //mainRouter?.pushToCandyScreen(nav: (navigationController!))
-        // view -> Presenter -> Router 로 네비게이션을 넘겨주어야 화면이 이동한다. <- viper에 부합하지 않음
+        //view -> Presenter -> Router 로 네비게이션을 넘겨주어야 화면이 이동한다. => presenter에 UIKit이 들어가 viper에 부합하지 않음 => 프로토콜로 넘겨주기 해보기
     }
 }
 
