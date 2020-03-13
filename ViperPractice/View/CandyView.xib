@@ -257,7 +257,7 @@
                 <constraint firstItem="fp7-u7-JPE" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Hgj-lH-pT9"/>
                 <constraint firstItem="fp7-u7-JPE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Yqx-3m-sIu"/>
                 <constraint firstItem="fp7-u7-JPE" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="edy-c1-NUl"/>
-                <constraint firstItem="tO2-qi-Hvh" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="izd-2C-uNh"/>
+                <constraint firstItem="tO2-qi-Hvh" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" priority="250" id="izd-2C-uNh"/>
                 <constraint firstItem="tO2-qi-Hvh" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="oSD-Se-mj0"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

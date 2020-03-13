@@ -27,7 +27,6 @@ class CandyView : UIViewController {
     @IBOutlet weak private var quantityStepper: UIStepper!
     @IBOutlet weak private var quantityLabel: UILabel!
     
-    
     // Chocolate View
     @IBOutlet weak private var chocoImageView: UIImageView!
     @IBOutlet weak private var chocoTitleLabel: UILabel!
@@ -36,23 +35,22 @@ class CandyView : UIViewController {
     @IBOutlet weak private var chocoQuantityStepper: UIStepper!
     @IBOutlet weak private var chocoQuantityLabel: UILabel!
     
-    
     // Total View
     @IBOutlet weak private var totalPriceLabel: UILabel!
     @IBOutlet weak private var taxLabel: UILabel!
     @IBOutlet weak private var inclTaxLabel: UILabel!
  
-    // button
+    
+    override func viewDidLoad() {
+           super.viewDidLoad()
+           presenter?.fetch()
+    }
+    
+    // reset button
     @IBAction func cancleBtn(_ sender: UIButton) {
         quantityStepper!.value = 0
         chocoQuantityStepper!.value = 0
         presenter?.update(candyQuantity: Int(quantityStepper!.value), chocoQuantity: Int(chocoQuantityStepper!.value))
-    }
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        presenter?.fetch()
     }
     
     @IBAction func quantityStepperVaueChanged(_ sender: UIStepper) {

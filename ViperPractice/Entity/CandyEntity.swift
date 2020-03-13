@@ -9,7 +9,6 @@
 import Foundation
 
 // Entitiy는 단순 데이터 모델
-
 struct CandyEntity{
     let title : String
     let description : String
