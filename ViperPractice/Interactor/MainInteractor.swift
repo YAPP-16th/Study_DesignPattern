@@ -9,6 +9,7 @@
 import Foundation
 
 protocol MainInteractorProtocol {
+    // interactor -> presenter (send data)
     func fetchStore()
 }
 

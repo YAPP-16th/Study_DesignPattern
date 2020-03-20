@@ -24,6 +24,7 @@ class MainRouter : RouterProtocol {
     func push(from:Viewable) {
         let view = self.setCandyview()
         from.push(view, animated: true)
+        print("router respond")
     }
     
     func present(from:Viewable) {

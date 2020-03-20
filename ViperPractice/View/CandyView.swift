@@ -16,7 +16,7 @@ protocol ViewProtocol : class {
 }
 
 // View는 비즈니스 로직을 피한다. UI코드만 기억해야한다.
-class CandyView : UIViewController {
+class CandyView : UIViewController, Viewable{
     var presenter : PresenterProtocol?
     
     // CandyView

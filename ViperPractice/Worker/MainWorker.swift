@@ -9,6 +9,7 @@
 import Foundation
 
 protocol APIStoreWorkerProtocol {
+    // entitiy -> data mapping -> interactor
     func fetchCandyStore(callBack: (StoreEntity) -> Void)
 }
 

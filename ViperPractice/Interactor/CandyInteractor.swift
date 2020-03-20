@@ -9,7 +9,9 @@
 import Foundation
 
 protocol InteractorProtocol {
+    // interactor -> presenter (send data)
     func fetchItems()
+    // presenter -> interactor (update)
     func update(candyQuantity candyquantity:Int, chocoQuantity chocoquantity: Int)
 }
 

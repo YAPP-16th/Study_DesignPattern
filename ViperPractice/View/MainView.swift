@@ -20,7 +20,8 @@ import UIKit
 
 protocol MainViewProtocol : class {
     var presenter: MainPresenterProtocol? {get set}
-    func setCandyStore(viewmodel: StoreViewModel)
+    // presenter -> view
+    func setCandyStore(viewmodel: StoreEntity)
 }
 
 class MainView : UIViewController {
@@ -29,7 +30,7 @@ class MainView : UIViewController {
     @IBOutlet weak var candyImage: UIImageView!
     
     var presenter: MainPresenterProtocol? // 프레센터 연결
-    // 프로토콜을 사용할 때 !로 선언하기 - 메모리 문제 발생할 수 있음
+    // 피드백 = 프로토콜을 사용할 때 !로 선언하기 - 메모리 문제 발생할 수 있음
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,20 +39,16 @@ class MainView : UIViewController {
 }
 
 extension MainView : MainViewProtocol {
-    func setCandyStore(viewmodel: StoreViewModel) {
+    func setCandyStore(viewmodel: StoreEntity) {
         let candyGesture : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(touchCandyView(sender:)))
-        candyName.text = viewmodel.name
-        candyImage.image = UIImage(named: viewmodel.imageName)
+        candyName.text = viewmodel.StoreName
+        candyImage.image = UIImage(named: viewmodel.StoreImage)
         
         self.candyView.addGestureRecognizer(candyGesture)
     }
        
     @objc func touchCandyView(sender: UITapGestureRecognizer){
-        MainRouter().push(from: self)
-        //dependencies?.router.view.push(storeView, animated: true)
-        //presenter?.showNextController(navigationController: navigationController!)
-        //mainRouter?.pushToCandyScreen(nav: (navigationController!))
-        //view -> Presenter -> Router 로 네비게이션을 넘겨주어야 화면이 이동한다. => presenter에 UIKit이 들어가 viper에 부합하지 않음 => 프로토콜로 넘겨주기 해보기
+        presenter?.viewDidLoad(fromView: self)
     }
 }
 

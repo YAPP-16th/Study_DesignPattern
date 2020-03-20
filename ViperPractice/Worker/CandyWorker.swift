@@ -13,6 +13,7 @@ import Foundation
 // Worker는 각 데이터 소스에 대한 worker class를 만들 수 있다. interactor 크기를 줄이기 위해 쓰이기도 한다.
 
 protocol APIWorkerProtocol {
+    // entitiy -> data mapping -> interactor
     func fetchCandy(callBack: (CandyEntity) -> Void)
     func fetchChoco(callBack: (CandyEntity) -> Void)
 }

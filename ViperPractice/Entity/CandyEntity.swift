@@ -18,7 +18,7 @@ struct CandyEntity{
     let imageName : String
 }
 
-// 가공 후 모델
+// price -> String. 가공 후 모델
 struct CandyViewModel{
     let title: String
     let description: String
