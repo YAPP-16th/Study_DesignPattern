@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,30 +16,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BmA-Ph-51A">
-                                <rect key="frame" x="20" y="44" width="374" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yi0-Sh-LlM">
-                                <rect key="frame" x="20" y="86" width="374" height="776"/>
+                                <rect key="frame" x="20" y="100" width="374" height="762"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cityPrototypeCell" id="RbZ-aj-I9e">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RbZ-aj-I9e" id="1lq-tr-M7o">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="7NK-5S-WJF">
+                                <rect key="frame" x="20" y="44" width="374" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Yi0-Sh-LlM" firstAttribute="top" secondItem="BmA-Ph-51A" secondAttribute="bottom" constant="8" id="C8b-8N-A19"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Yi0-Sh-LlM" secondAttribute="bottom" id="ERI-WR-w9K"/>
-                            <constraint firstItem="BmA-Ph-51A" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GOR-lg-4Rz"/>
                             <constraint firstItem="Yi0-Sh-LlM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="HbV-Zt-ycx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BmA-Ph-51A" secondAttribute="trailing" constant="20" id="VIN-tY-f2u"/>
-                            <constraint firstItem="BmA-Ph-51A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jke-GR-3qm"/>
-                            <constraint firstItem="BmA-Ph-51A" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jx9-C7-tiG"/>
+                            <constraint firstItem="7NK-5S-WJF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JNk-1e-6KN"/>
+                            <constraint firstItem="7NK-5S-WJF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JhS-Ho-ay6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7NK-5S-WJF" secondAttribute="trailing" constant="20" id="a3D-cX-6WQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yi0-Sh-LlM" secondAttribute="trailing" constant="20" id="nxm-BX-Z4Y"/>
                             <constraint firstItem="Yi0-Sh-LlM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="o9x-7x-Qkv"/>
+                            <constraint firstItem="7NK-5S-WJF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="u6K-iW-N18"/>
+                            <constraint firstItem="Yi0-Sh-LlM" firstAttribute="top" secondItem="7NK-5S-WJF" secondAttribute="bottom" id="wGA-ds-n6L"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="7NK-5S-WJF" id="Xai-hd-eOj"/>
+                        <outlet property="tableView" destination="Yi0-Sh-LlM" id="T8T-6W-zoX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
