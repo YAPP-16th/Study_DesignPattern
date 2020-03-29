@@ -16,6 +16,7 @@
 		42CC05D524308F6D0050FF66 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CC05D424308F6D0050FF66 /* CourseCell.swift */; };
 		42CC05D7243091C50050FF66 /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CC05D6243091C50050FF66 /* CourseViewController.swift */; };
 		42CC05DA243093090050FF66 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CC05D9243093090050FF66 /* Service.swift */; };
+		42CC05DD243099340050FF66 /* CourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CC05DC243099340050FF66 /* CourseViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		42CC05D424308F6D0050FF66 /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
 		42CC05D6243091C50050FF66 /* CourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
 		42CC05D9243093090050FF66 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		42CC05DC243099340050FF66 /* CourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		42CC05BA24308EE40050FF66 /* mvc_to_mvvm */ = {
 			isa = PBXGroup;
 			children = (
+				42CC05DB243099200050FF66 /* ViewModel */,
 				42CC05D8243092190050FF66 /* Service */,
 				42CC05D124308F140050FF66 /* Controller */,
 				42CC05D024308F0E0050FF66 /* View */,
@@ -106,6 +109,14 @@
 				42CC05D9243093090050FF66 /* Service.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		42CC05DB243099200050FF66 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				42CC05DC243099340050FF66 /* CourseViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +192,7 @@
 			files = (
 				42CC05D524308F6D0050FF66 /* CourseCell.swift in Sources */,
 				42CC05D324308F1F0050FF66 /* Course.swift in Sources */,
+				42CC05DD243099340050FF66 /* CourseViewModel.swift in Sources */,
 				42CC05C024308EE40050FF66 /* ViewController.swift in Sources */,
 				42CC05D7243091C50050FF66 /* CourseViewController.swift in Sources */,
 				42CC05BC24308EE40050FF66 /* AppDelegate.swift in Sources */,

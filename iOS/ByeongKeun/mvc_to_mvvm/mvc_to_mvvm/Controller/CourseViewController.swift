@@ -9,7 +9,7 @@
 import UIKit
 
 class CourseViewController: UITableViewController{
-  var courses = [Course]()
+  var courseViewModels = [CourseViewModel]()
   let cellId = "cellId"
   
   override func viewDidLoad() {
@@ -27,18 +27,18 @@ class CourseViewController: UITableViewController{
         return
       }
       
-      self.courses = courses ?? []
+      self.courseViewModels = courses?.map { CourseViewModel(course: $0) } ?? []
       self.tableView.reloadData()
     }
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return courses.count
+    return courseViewModels.count
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! CourseCell
-    cell.course = courses[indexPath.row]
+    cell.courseViewModel = courseViewModels[indexPath.row]
     return cell
   }
   
