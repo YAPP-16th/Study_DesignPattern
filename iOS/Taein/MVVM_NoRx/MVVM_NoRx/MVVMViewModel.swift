@@ -11,8 +11,13 @@ import Foundation
 public class MVVMViewModel {
     
     var helloText = DataBinding("")
+    var currentCount = DataBinding(0.0)
     
     func userTriggeredSayHelloButton() {
         helloText.valueForBind = "Hello World"
+    }
+    
+    func userTriggeredUIStepper(_ value: Double) {
+        currentCount.valueForBind = value
     }
 }

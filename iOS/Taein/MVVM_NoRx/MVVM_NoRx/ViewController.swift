@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var helloLabel: UILabel!
+    @IBOutlet weak var countLabel: UILabel!
+    
     var viewModel: MVVMViewModel?
     
     override func viewDidLoad() {
@@ -24,7 +26,18 @@ class ViewController: UIViewController {
                     self.helloLabel.text = helloText
                 }
             })
+            
+            viewModel.currentCount.bind({ (currentCount) in
+                DispatchQueue.main.async {
+                    self.countLabel.text = "\(currentCount)"
+                }
+            })
         }
+    }
+    
+    @IBAction func stepperValueChanged(_ sender: UIStepper) {
+        print(sender.value)
+        viewModel?.userTriggeredUIStepper(sender.value)
     }
     
     @IBAction func sayHelloButtonPressed(_ sender: UIButton) {
