@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MVVM_NoRx" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="버튼을 눌러보세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMX-21-Td9">
+                                <rect key="frame" x="145.5" y="155" width="123" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stepper를 눌러보세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ZO-lr-UaX">
+                                <rect key="frame" x="130" y="340" width="154" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="li1-iA-rG9">
+                                <rect key="frame" x="24" y="184" width="367" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfm-Lb-MV4">
+                                <rect key="frame" x="139" y="220" width="136" height="30"/>
+                                <state key="normal" title="Hello World 출력하기"/>
+                                <connections>
+                                    <action selector="sayHelloButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="il5-N0-7h0"/>
+                                </connections>
+                            </button>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumValue="-100" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="bPJ-F7-G7h">
+                                <rect key="frame" x="160" y="405" width="94" height="32"/>
+                                <connections>
+                                    <action selector="stepperValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="TGL-qZ-veG"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ui0-V1-iuO">
+                                <rect key="frame" x="177.5" y="509" width="59.5" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bPJ-F7-G7h" firstAttribute="top" secondItem="5ZO-lr-UaX" secondAttribute="bottom" constant="44" id="EMn-oR-hhl"/>
+                            <constraint firstItem="bfm-Lb-MV4" firstAttribute="top" secondItem="li1-iA-rG9" secondAttribute="bottom" constant="36" id="FqK-J7-cve"/>
+                            <constraint firstItem="ui0-V1-iuO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JFj-eq-vU2"/>
+                            <constraint firstItem="MMX-21-Td9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="NWx-rb-mGB"/>
+                            <constraint firstItem="5ZO-lr-UaX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PAM-uB-T8P"/>
+                            <constraint firstItem="MMX-21-Td9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="111" id="Re8-wO-EHa"/>
+                            <constraint firstItem="5ZO-lr-UaX" firstAttribute="top" secondItem="bfm-Lb-MV4" secondAttribute="bottom" constant="90" id="Rgu-sT-DhP"/>
+                            <constraint firstItem="bPJ-F7-G7h" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ZcU-m3-pIJ"/>
+                            <constraint firstItem="li1-iA-rG9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="daC-dn-h39"/>
+                            <constraint firstItem="ui0-V1-iuO" firstAttribute="top" secondItem="bPJ-F7-G7h" secondAttribute="bottom" constant="72" id="ncE-ly-G10"/>
+                            <constraint firstItem="li1-iA-rG9" firstAttribute="top" secondItem="MMX-21-Td9" secondAttribute="bottom" constant="8" id="o8v-PI-1WO"/>
+                            <constraint firstItem="bfm-Lb-MV4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rgG-4Q-WLA"/>
+                            <constraint firstItem="li1-iA-rG9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="x7h-UP-vpT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="countLabel" destination="ui0-V1-iuO" id="5SC-nc-MI7"/>
+                        <outlet property="helloLabel" destination="li1-iA-rG9" id="cFb-cq-g2f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
